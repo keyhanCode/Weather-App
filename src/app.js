@@ -6,7 +6,7 @@ const geoCode = require("./utils/geoCode");
 const forecast = require("./utils/forecast");
 
 //set port
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 //call express function
 const app = express();
@@ -88,6 +88,6 @@ app.get("*", (req, res) => {
 });
 
 //set wich port express listen to and run the server
-app.listen(PORT, () => {
-  console.log("server is running on port " + PORT);
+app.listen(port, () => {
+  console.log("server is running on port " + port);
 });
