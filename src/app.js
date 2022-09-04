@@ -4,7 +4,9 @@ const hbs = require("hbs"); //require hbs for set partial location
 //
 const geoCode = require("./utils/geoCode");
 const forecast = require("./utils/forecast");
-//
+
+//set port
+const port = process.env.port ?? 3000;
 
 //call express function
 const app = express();
@@ -86,6 +88,6 @@ app.get("*", (req, res) => {
 });
 
 //set wich port express listen to and run the server
-app.listen(3000, () => {
-  console.log("server is running");
+app.listen(port, () => {
+  console.log("server is running on port " + port);
 });
