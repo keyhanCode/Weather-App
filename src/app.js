@@ -6,7 +6,7 @@ const geoCode = require("./utils/geoCode");
 const forecast = require("./utils/forecast");
 
 //set port
-const port = process.env.port ?? 3000;
+const port = process.env.PORT || 3000;
 
 //call express function
 const app = express();
