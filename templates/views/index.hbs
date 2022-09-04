@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    {{>header}}  
+    <header id="home" class="header">
+      <div class="overlay"></div>
+      <div
+        id="header-carousel"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <div class="container">
+          <div class="carousel-inner">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="carousel-title">
+                  Weather forecast<br />
+                </h1>
+
+                <form class="formData" action="">
+                  <input type="text" placeholder="Enter your location">
+                <button class="btn btn-primary btn-rounded">Submit</button>
+                </form>
+                <h5 class="weatherResultOne"></h5>
+                <h5 class="weatherResultTwo"></h5>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    {{>footer}}
+    {{>js}}
+    <script src="/js/app.js"></script>
+</body>
+</html>
