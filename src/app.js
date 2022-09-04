@@ -73,8 +73,8 @@ app.get("/weather", (req, res) => {
 //define 404 pages
 app.get("/about/*", (req, res) => {
   res.render("404.hbs", {
-    headTitle: "404 Erro",
-    errorMessage: "about article not found",
+    headTitle: "404 Error",
+    errorMessage: "about article not found 🗿",
   });
 });
 
