@@ -3,6 +3,7 @@ const input = document.querySelector("input");
 const resultOne = document.querySelector(".weatherResultOne");
 const resultTwo = document.querySelector(".weatherResultTwo");
 const greeting = document.querySelector(".greeting");
+const line = document.querySelector(".secline");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -18,6 +19,7 @@ weatherForm.addEventListener("submit", (e) => {
         resultTwo.textContent = " ";
       } else {
         if (data.is_day === "yes") {
+          line.style.display = "block";
           greeting.textContent = " Good morning 🌤️";
         } else {
           greeting.textContent = "Good knight 🌘";

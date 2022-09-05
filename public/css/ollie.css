@@ -12156,5 +12156,13 @@ pre .code {
 .greeting {
   text-align: center !important;
   color: #b0bec5 !important;
-  padding: 10px;
+}
+.secline {
+  width: 135px;
+  height: 2px;
+  border-radius: 2px;
+  background: #f06161;
+  margin: auto !important;
+  display: none;
+  margin-bottom: 23px !important;
 }
