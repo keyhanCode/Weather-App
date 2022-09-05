@@ -12153,3 +12153,8 @@ pre .code {
 .aboutMe {
   width: 65%;
 }
+.greeting {
+  text-align: center !important;
+  color: #b0bec5 !important;
+  padding: 10px;
+}

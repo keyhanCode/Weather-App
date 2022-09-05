@@ -47,10 +47,7 @@ app.get("/weather", (req, res) => {
     if (err) {
       res.send({ err });
     } else {
-      forecast(
-        latitude,
-        longtitude,
-        (err, { descrition, temperature, feelsLike } = {}) => {
+      forecast(latitude,longtitude,(err, { descrition, temperature, feelsLike, is_day }={}) => {
           if (err) {
             res.send({ err });
           } else {
@@ -64,6 +61,7 @@ app.get("/weather", (req, res) => {
               forecast: result,
               location,
               address: req.query.address,
+              is_day,
             });
           }
         }

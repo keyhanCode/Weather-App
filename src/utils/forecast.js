@@ -21,6 +21,7 @@ function forecast(latitude, longtitude, callback) {
         descrition: body.current.weather_descriptions[0],
         temperature: body.current.temperature,
         feelsLike: body.current.feelslike,
+        is_day: body.current.is_day,
       });
     }
   });

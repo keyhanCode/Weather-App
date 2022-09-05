@@ -2,6 +2,7 @@ const weatherForm = document.querySelector("form");
 const input = document.querySelector("input");
 const resultOne = document.querySelector(".weatherResultOne");
 const resultTwo = document.querySelector(".weatherResultTwo");
+const greeting = document.querySelector(".greeting");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -16,8 +17,13 @@ weatherForm.addEventListener("submit", (e) => {
         resultOne.textContent = data.err;
         resultTwo.textContent = " ";
       } else {
+        if (data.is_day === "yes") {
+          greeting.textContent = " Good morning 🌤️";
+        } else {
+          greeting.textContent = "Good knight 🌘";
+        }
         resultOne.textContent = data.location + " 📍";
-        resultTwo.textContent = data.forecast + " ⛅";
+        resultTwo.textContent = data.forecast + " 🌡️";
       }
     });
   });
@@ -26,4 +32,3 @@ weatherForm.addEventListener("submit", (e) => {
 function showResult(data) {
   result.textContent = data;
 }
-
