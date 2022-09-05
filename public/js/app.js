@@ -10,11 +10,16 @@ weatherForm.addEventListener("submit", (e) => {
 
   resultOne.textContent = "Please wait ...🛰️";
   resultTwo.textContent = " ";
+  line.style.display = "none";
+  greeting.textContent = " ";
+
   const address = input.value;
 
   fetch(`/weather?address=${address}`).then((res) => {
     res.json().then((data) => {
       if (data.err) {
+        line.style.display = "none";
+        greeting.textContent = " ";
         resultOne.textContent = data.err;
         resultTwo.textContent = " ";
       } else {
@@ -23,6 +28,7 @@ weatherForm.addEventListener("submit", (e) => {
           greeting.textContent = " Good morning 🌤️";
         } else {
           greeting.textContent = "Good knight 🌘";
+          line.style.display = "block";
         }
         resultOne.textContent = data.location + " 📍";
         resultTwo.textContent = data.forecast + " 🌡️";
