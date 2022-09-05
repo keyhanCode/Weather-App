@@ -26,3 +26,4 @@ weatherForm.addEventListener("submit", (e) => {
 function showResult(data) {
   result.textContent = data;
 }
+
