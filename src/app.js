@@ -5,7 +5,7 @@ const hbs = require("hbs"); //require hbs for set partial location
 const geoCode = require("./utils/geoCode");
 const forecast = require("./utils/forecast");
 
-//set port
+//set port => herku set its port of PORT varialbe that is in process.env ||
 const port = process.env.PORT || 3000;
 
 //call express function
@@ -16,7 +16,7 @@ const publicDirectoyPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 
-//Setup static directory to save
+//Setup static directory => this dri will read by borwser
 app.use(express.static(publicDirectoyPath));
 
 //Setup handlebar engine and views location
