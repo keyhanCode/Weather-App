@@ -10,5 +10,5 @@
 >> This app used weatherstack.com for weather forecasting and mapbox.com to geodcoding and find cordinate of entered address .
 
 # Demo of project 
-![weather=app](/)
+![weather=app](/demo.png)
 https://weatherkey.herokuapp.com/
